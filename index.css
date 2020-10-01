@@ -1,0 +1,154 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #0837B0 0%, #021E66 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.count {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 62px;
+    background-color: #fff;
+    font-size: 150px;
+    line-height: 176px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.wrapper__btn {
+    margin-top: 34px;
+    padding: 0 15px;
+    width: 300px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between
+}
+
+.btn {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 65px;
+    line-height: 65px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.inc {
+    background: #089C20;
+}
+
+.dec {
+    background: #E7AA10;
+}
+
+.reset {
+    background: #CF1C1C;
+}
+
+.reset img:first-child {
+    margin-bottom: 7px;
+}
