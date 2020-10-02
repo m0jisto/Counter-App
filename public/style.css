@@ -148,7 +148,3 @@ select {
 .reset {
     background: #CF1C1C;
 }
-
-.reset img:first-child {
-    margin-bottom: 7px;
-}
